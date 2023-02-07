@@ -268,4 +268,5 @@ D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\bin\Debug\netcoreapp3.1\M
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeAPI\obj\Debug\netcoreapp3.1\EmployeeAPI.MvcApplicationPartsAssemblyInfo.cache
