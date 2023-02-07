@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeAPI\\EmployeeAPI.csproj": {}
+    "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeAPI\\EmployeeAPI.csproj": {}
   },
   "projects": {
-    "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeAPI\\EmployeeAPI.csproj": {
+    "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeAPI\\EmployeeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectUniqueName": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeAPI\\EmployeeAPI.csproj",
         "projectName": "EmployeeAPI",
-        "projectPath": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeAPI\\EmployeeAPI.csproj",
+        "projectPath": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeAPI\\EmployeeAPI.csproj",
         "packagesPath": "C:\\Users\\LARIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeAPI\\obj\\",
+        "outputPath": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LARIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

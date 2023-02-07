@@ -17,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using EmployeeAPI.Model;
 using EmployeeAPI.Model.DTO;
+using Microsoft.AspNetCore.Identity;
 
 namespace EmployeeAPI
 {
@@ -42,6 +43,10 @@ namespace EmployeeAPI
                 configuration.CreateMap<Employee, EmployeeDTO>();
                 configuration.CreateMap<EmployeeDTO, Employee>();
             }, typeof(Startup));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddCors();
             services.AddControllers();

@@ -6205,11 +6205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeWEB\\EmployeeWEB.csproj",
+      "projectUniqueName": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeWEB\\EmployeeWEB.csproj",
       "projectName": "EmployeeWEB",
-      "projectPath": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeWEB\\EmployeeWEB.csproj",
+      "projectPath": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeWEB\\EmployeeWEB.csproj",
       "packagesPath": "C:\\Users\\LARIN\\.nuget\\packages\\",
-      "outputPath": "D:\\Udemy\\Curso de Web API\\Prueba_Practica\\Employee\\EmployeeWEB\\obj\\",
+      "outputPath": "D:\\Udemy\\WebAPI_Repositorio\\WebAPI_NETCore\\EmployeeWEB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LARIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
