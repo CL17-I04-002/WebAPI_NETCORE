@@ -99,7 +99,7 @@ namespace EmployeeAPI.Controllers
             {
                 ///Vamos agregar un identificador unico
                 new Claim(ClaimTypes.NameIdentifier, user.Id)
-        };
+            };
             ///Vamos agregar la lista de roles
             foreach (var rolName in roles)
             {

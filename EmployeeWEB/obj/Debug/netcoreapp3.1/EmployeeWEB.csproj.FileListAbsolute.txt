@@ -800,3 +800,4 @@ D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\E
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\EmployeeWEB.csproj.CopyComplete
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\EmployeeWEB.dll
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\EmployeeWEB.pdb
+D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

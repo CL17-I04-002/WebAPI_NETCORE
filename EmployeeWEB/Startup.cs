@@ -25,6 +25,14 @@ namespace EmployeeWEB
         {
             services.AddHttpClient();
             services.AddHttpContextAccessor();
+
+            services.AddSession(option =>
+            {
+                option.IdleTimeout = TimeSpan.FromMinutes(10);
+                option.Cookie.HttpOnly = true;
+                option.Cookie.IsEssential = true;
+            });
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
@@ -45,6 +53,10 @@ namespace EmployeeWEB
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+
+            app.UseSession();
 
             app.UseAuthorization();
 
