@@ -26,8 +26,15 @@ using EmployeeWEB.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1e1bcee06d5b4c7097e524a72107359317d502f5", @"/Views/Shared/_TableButtonPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"93419c24b3a07e207ae4b859e23e3d052790e71a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"63f9b0b29e7dc0ce8aab3e90ad479d66a2d342c2", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__TableButtonPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<int>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Edit", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -61,7 +68,7 @@ using EmployeeWEB.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("   <div class=\"btn-group\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e1bcee06d5b4c7097e524a72107359317d502f55214", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e1bcee06d5b4c7097e524a72107359317d502f55409", async() => {
                 WriteLiteral("<i class=\"fa fa-pencil\"></i>");
             }
             );
@@ -94,7 +101,7 @@ using EmployeeWEB.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e1bcee06d5b4c7097e524a72107359317d502f57565", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e1bcee06d5b4c7097e524a72107359317d502f57760", async() => {
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
             }
             );

@@ -26,6 +26,8 @@ namespace EmployeeWEB
             services.AddHttpClient();
             services.AddHttpContextAccessor();
 
+            services.AddHttpContextAccessor();
+
             services.AddSession(option =>
             {
                 option.IdleTimeout = TimeSpan.FromMinutes(10);

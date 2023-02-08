@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using EmployeeWEB.Models;
 using EmployeeWEB.Utility;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeWEB.Controllers
@@ -24,7 +25,7 @@ namespace EmployeeWEB.Controllers
         {
             try
             {
-                return View(await util.GetAllAsync(Resource.EmployeeAPIUrl));
+                return View(await util.GetAllAsync(Resource.EmployeeAPIUrl, HttpContext.Session.GetString("Token")));
             }catch (Exception ex)
             {
                 ModelState.AddModelError("", "Error al obtener los empleados: " + ex.Message);

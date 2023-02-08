@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,9 +44,13 @@ namespace EmployeeWEB.Utility
                 }
             };
         }
-        public async Task<IEnumerable<T>> GetAllAsync(string url)
+        public async Task<IEnumerable<T>> GetAllAsync(string url, string token)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, url);
+            if(token.Length > 0)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             var httpClient = httpClientFactory.CreateClient();
 
@@ -160,6 +165,7 @@ namespace EmployeeWEB.Utility
             HttpResponseMessage response = await httpClient.SendAsync(request);
 
             if (response.StatusCode == HttpStatusCode.NotFound ||
+                response.StatusCode == HttpStatusCode.BadRequest ||
                 response.StatusCode == HttpStatusCode.InternalServerError)
             {
                 var json = await response.Content.ReadAsStringAsync();
