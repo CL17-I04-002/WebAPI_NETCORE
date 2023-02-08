@@ -99,7 +99,7 @@ namespace EmployeeWEB.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult AcessDenied()
+        public IActionResult AccessDenied()
         {
             return View();
         }

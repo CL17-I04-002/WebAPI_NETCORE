@@ -86,6 +86,7 @@ namespace EmployeeWEB.Controllers
             }
             return View(employee);
         }
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();

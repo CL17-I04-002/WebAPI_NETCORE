@@ -49,7 +49,7 @@ namespace EmployeeAPI.Controllers
                 {
                     await roleManager.CreateAsync(new IdentityRole("Customer"));
                 }
-                await userManager.AddToRoleAsync(user, "Admin");
+                await userManager.AddToRoleAsync(user, "Customer");
 
                 return NoContent();
             }
