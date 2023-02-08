@@ -20,9 +20,14 @@ namespace EmployeeWEB.Utility
             this.httpClientFactory = httpClientFactory;
         }
 
-        public async Task<ModelStateError> CreateAsync(string url, T entity)
+        public async Task<ModelStateError> CreateAsync(string url, T entity, string token)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, url);
+
+            if(token.Length > 0)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             request.Content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, Resource.contentType);
 
@@ -67,9 +72,14 @@ namespace EmployeeWEB.Utility
                 return null;
             }
         }
-        public async Task<T> GetAsync(string url, int id)
+        public async Task<T> GetAsync(string url, int id, string token)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, url + id);
+
+            if (token.Length > 0)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             var httpClient = httpClientFactory.CreateClient();
 
@@ -82,9 +92,14 @@ namespace EmployeeWEB.Utility
             }
             return null;
         }
-        public async Task<ModelStateError> UpdateAsync(string url, T entity)
+        public async Task<ModelStateError> UpdateAsync(string url, T entity, string token)
         {
             var request = new HttpRequestMessage(HttpMethod.Put, url);
+
+            if (token.Length > 0)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             request.Content = new StringContent(JsonConvert.SerializeObject(entity), Encoding.UTF8, Resource.contentType);
 
@@ -119,9 +134,14 @@ namespace EmployeeWEB.Utility
                 }
             };
         }
-        public async Task<ModelStateError> DeleteAsync(string url, int id)
+        public async Task<ModelStateError> DeleteAsync(string url, int id, string token)
         {
             var request = new HttpRequestMessage(HttpMethod.Delete, url + id);
+
+            if (token.Length > 0)
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
 
             var httpClient = httpClientFactory.CreateClient();
 

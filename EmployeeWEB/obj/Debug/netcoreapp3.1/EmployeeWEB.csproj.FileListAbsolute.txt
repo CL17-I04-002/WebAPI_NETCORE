@@ -803,3 +803,4 @@ D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\E
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_loginPartial.cshtml.g.cs
+D:\Udemy\WebAPI_Repositorio\WebAPI_NETCore\EmployeeWEB\obj\Debug\netcoreapp3.1\Razor\Views\Account\AcessDenied.cshtml.g.cs

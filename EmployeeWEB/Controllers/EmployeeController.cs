@@ -5,11 +5,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using EmployeeWEB.Models;
 using EmployeeWEB.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeWEB.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IHttpClientFactory httpClientFactory;
@@ -32,6 +34,7 @@ namespace EmployeeWEB.Controllers
                 return View();
             }
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View(new Employee());
@@ -42,7 +45,7 @@ namespace EmployeeWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var modelStateError = await util.CreateAsync(Resource.EmployeeAPIUrl, employee);
+                var modelStateError = await util.CreateAsync(Resource.EmployeeAPIUrl, employee, HttpContext.Session.GetString("Token"));
                 if(modelStateError.Response.Errors.Count > 0)
                 {
                     foreach(var item in modelStateError.Response.Errors)
@@ -55,10 +58,11 @@ namespace EmployeeWEB.Controllers
             }
             return View(employee);
         }
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
-            var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id.GetValueOrDefault());
+            var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id.GetValueOrDefault(), HttpContext.Session.GetString("Token"));
             if (employee == null) return NotFound();
 
             return View(employee);
@@ -69,7 +73,7 @@ namespace EmployeeWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var modelStateError = await util.UpdateAsync(Resource.EmployeeAPIUrl + employee.Id, employee);
+                var modelStateError = await util.UpdateAsync(Resource.EmployeeAPIUrl + employee.Id, employee, HttpContext.Session.GetString("Token"));
                 if(modelStateError.Response.Errors.Count > 0)
                 {
                     foreach(var item in modelStateError.Response.Errors)
@@ -85,7 +89,7 @@ namespace EmployeeWEB.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
-            var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id.GetValueOrDefault());
+            var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id.GetValueOrDefault(), HttpContext.Session.GetString("Token"));
             if (employee == null) return NotFound();
             return View(employee);
         }
@@ -94,10 +98,10 @@ namespace EmployeeWEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {  
-                var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id);
+                var employee = await util.GetAsync(Resource.EmployeeAPIUrl, id, HttpContext.Session.GetString("Token"));
 
                 if (employee == null) return NotFound();
-                var modelStateError = await util.DeleteAsync(Resource.EmployeeAPIUrl, id);
+                var modelStateError = await util.DeleteAsync(Resource.EmployeeAPIUrl, id, HttpContext.Session.GetString("Token"));
 
                 if(modelStateError.Response.Errors.Count > 0)
                 {
